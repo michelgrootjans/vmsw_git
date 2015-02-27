@@ -38,6 +38,11 @@ namespace GitExperiment.Tests.Bowling
             return score;
         }
 
+        public void Roll(int pins)
+        {
+            GetPlayableFrame().Roll(pins);
+        }
+
         private int ScoreFor(int frameNumber)
         {
             if (Frame(frameNumber).IsStrike)
