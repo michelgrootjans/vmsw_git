@@ -23,11 +23,6 @@ namespace GitExperiment.Tests.Bowling
             return frames.Last();
         }
 
-        public void Roll(int pins)
-        {
-            GetPlayableFrame().Roll(pins);
-        }
-
         public int GetScore()
         {
             var score = 0;
@@ -36,6 +31,11 @@ namespace GitExperiment.Tests.Bowling
                 score += ScoreFor(frame);
 
             return score;
+        }
+
+        public void Roll(int pins)
+        {
+            GetPlayableFrame().Roll(pins);
         }
 
         private int ScoreFor(int frameNumber)
